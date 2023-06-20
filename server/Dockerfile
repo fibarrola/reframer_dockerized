@@ -21,7 +21,7 @@ ENV PATH /opt/conda/bin:$PATH
 COPY ./environment.yml /tmp/environment.yml
 COPY ./requirements.txt /tmp/requirements.txt
 
-RUN conda update conda \
+RUN conda update -n base -c defaults conda \
     && conda env create -f /tmp/environment.yml python=3.8.13
 
 ENV PATH /opt/conda/envs/env/bin:$PATH
