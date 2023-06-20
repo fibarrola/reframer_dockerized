@@ -13,6 +13,29 @@ Maximal control, minimal obtrusiveness has long been the hallmark of creativity 
 <br>
 <br>
 
+# Run in Docker
+
+First of all, install [Docker](https://www.docker.com/)
+
+Then run in a terminal (commands are for Ubuntu)
+```
+git clone https://github.com/fibarrola/reframer_dockerized.git
+cd reframer_dockerized/server
+docker build -t reframer:1.0 .
+docker run -p 8000:8000 reframer:1.0
+```
+
+And in another terminal
+```
+cd reframer_dockerized/web
+firefox index.html
+```
+
+
+
+<br>
+<br>
+
 # Step by Step Installation
 
 In order to run Reframer application you will need to run both the client and the server. The server works on CPU although it is much better to use Reframer with a suitable graphics card (GPU). The following steps should automatically install the dependencies but you may need to tweak dependencies depending on your machine/GPU. 
