@@ -13,6 +13,8 @@ server/src/data/
 server/src/data/interface_paths.svg
 server/diffvg
 
+aux
+
 reactcanvas/node_modules
 
 __pycache__/
