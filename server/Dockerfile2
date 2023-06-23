@@ -1,0 +1,10 @@
+FROM reframer:0.0
+
+COPY src/ .
+
+RUN conda config --add channels conda-forge
+RUN conda install pytorch==1.9.1 torchvision==0.10.1 cudatoolkit==11.3 -c pytorch
+RUN pip list
+RUN conda list
+
+CMD ["python3", "main.py"]

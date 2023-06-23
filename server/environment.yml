@@ -4,11 +4,11 @@ channels:
   - conda-forge
   - defaults
 dependencies:
-  - python=3.8
-  - cudatoolkit
+  - python=3.10.11
+  - cudatoolkit=11.3
   - thrust
-  - pytorch
-  - torchvision
+  - pytorch=1.9.1
+  - torchvision=0.10.1
   - numpy
   - scikit-image
   - cmake

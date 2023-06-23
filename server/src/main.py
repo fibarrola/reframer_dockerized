@@ -12,6 +12,8 @@ import torch
 import clip
 import pydiffvg
 
+import subprocess
+
 # TO DO add environment var to set log mode
 logging.basicConfig(
     level=logging.DEBUG,
@@ -21,6 +23,8 @@ logging.basicConfig(
 logging.info("Starting App")
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 logging.info(f"Running with {str(device)}")
+logging.info(subprocess.check_output(["nvidia-smi"]))
+logging.info(pydiffvg.get_device())
 
 app = FastAPI(title="Clip Algorithm API")
 origins = [
