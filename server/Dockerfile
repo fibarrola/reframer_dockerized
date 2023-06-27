@@ -1,4 +1,4 @@
-FROM python:3.10
+FROM python:3.8
 
 WORKDIR /app
 
@@ -22,7 +22,7 @@ COPY ./environment.yml /tmp/environment.yml
 COPY ./requirements.txt /tmp/requirements.txt
 
 RUN conda update -n base -c defaults conda \
-    && conda env create -f /tmp/environment.yml
+    && conda env create -f /tmp/environment.yml python=3.8.13
 
 ENV PATH /opt/conda/envs/env/bin:$PATH
 ENV CONDA_DEFAULT_ENV env
@@ -46,11 +46,12 @@ RUN cd diffvg && \
     python fix.py && \ 
     python setup.py install
 
-# COPY src/ .
-# # EXPOSE 8000
-# RUN conda config --add channels conda-forge
-# RUN conda install pytorch==1.9.1 torchvision==0.10.1 cudatoolkit==11.3
-# RUN pip list
-# RUN conda list
-# # CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
-# CMD ["python3", "main.py"]
+COPY src/ .
+# EXPOSE 8000
+RUN conda config --add channels conda-forge
+RUN conda install pytorch==1.9.1 torchvision==0.10.1
+RUN pip list
+RUN conda list
+# CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["python3", "main.py"]
+
