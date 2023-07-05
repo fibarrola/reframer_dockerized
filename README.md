@@ -2,7 +2,7 @@
 
 [Tomas Lawton](https://www.linkedin.com/in/tomas-lawton-512066199), [Francisco Ibarrola](https://www.linkedin.com/in/fibarrola/) and [Kazjon Grace](https://www.linkedin.com/in/kazjon-grace/)
 
-![Image of the Reframer Interface](repo_img/reframer_interface.png?raw=true "Image of the Reframer Interface")
+[![reframer video thumbnail](https://img.youtube.com/vi/0-TfH4lWs7M/0.jpg)](https://www.youtube.com/watch?v=0-TfH4lWs7M)
 
 Maximal control, minimal obtrusiveness has long been the hallmark of creativity support. Reframer [1] is functioning platform disrupting the status-quo by combining sketching with CICADA [2], a state-of-the-art AI algorithm for agent-augmented conceptual design. Unlike the vast majority of text-to-image generative systems, users are directly involved in the process of creation, and the AI is capable of making suggestions based on the user prompt. Users can create a sketch and a enter a prompt and Reframer will add strokes and modify the sketch. As this happens, users maintain seamless editorial control as they accept, modify, or reject AI contributions in real-time.
 
